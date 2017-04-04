@@ -2,9 +2,6 @@ package de.fortis_it.wondercheck.data;
 
 /**
  * Created by Robert on 03.04.2017.
- */
-
-/**
  * Data structure for our items
  */
 

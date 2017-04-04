@@ -7,14 +7,15 @@ package de.fortis_it.wondercheck.data;
 
 public class Data {
     /**
-     * Make array of items
+     * Create array of items
      * @return the items array
      */
 
     public static Item[] createTestList() {
-        Item[] items = new Item[10];
-        for (int i = 0; i < 10; i++)
-            items[i] = new Item("Item0" + i);
-        return items;
+        Item[] list = new Item[10];
+        for (int i = 0; i < 10; i++) {
+            list[i] = new Item("Item0" + i);
+        }
+        return list;
     }
 }

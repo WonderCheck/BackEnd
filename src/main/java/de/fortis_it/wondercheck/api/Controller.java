@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  * Controller for our REST API
  * mapping the keyword 'list', returning some json test data
  */
+
 @RestController
 public class Controller {
 
