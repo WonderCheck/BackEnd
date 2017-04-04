@@ -5,8 +5,10 @@ package de.fortis_it.wondercheck.api;
  */
 
 import de.fortis_it.wondercheck.data.Data;
+import de.fortis_it.wondercheck.data.Item;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -16,8 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Controller {
 
-    @RequestMapping("/list")
-    public String returnItemList() {
-        return Data.jsonFromDataList(Data.testDataList());
+    @RequestMapping(value = "/list", method = RequestMethod.GET, produces = "application/json")
+    public Item[] returnItemsList() {
+        return Data.createTestList();
     }
 }
