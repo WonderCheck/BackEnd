@@ -5,16 +5,21 @@ package de.fortis_it.wondercheck.data;
  * Temporary for testing purposes only!
  */
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Data {
+
     /**
      * Create array of items
      * @return the items array
      */
 
-    public static Item[] createTestList() {
-        Item[] list = new Item[10];
+    public static List<Item> createTestList() {
+
+        List<Item> list = new ArrayList<Item>();
         for (int i = 0; i < 10; i++) {
-            list[i] = new Item("Item0" + i);
+            list.add(new Item("Item0" + i));
         }
         return list;
     }
