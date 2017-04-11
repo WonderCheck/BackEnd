@@ -6,7 +6,7 @@ import java.util.List;
 public class Data {
 
     /**
-     * Create array of items
+     * Create test array of items
      * @return the items array
      */
 
@@ -14,7 +14,7 @@ public class Data {
 
         List<Item> list = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            list.add(new Item(i, "Item" + i, false));
+            list.add(new Item(i, "Item" + i, i < 5));
         }
         return list;
     }
