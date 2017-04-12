@@ -1,20 +1,21 @@
 package de.fortis_it.wondercheck.data;
 
-/**
- * Created by Robert on 03.04.2017.
- * Temporary for testing purposes only!
- */
+import java.util.ArrayList;
+import java.util.List;
 
 public class Data {
+
     /**
-     * Make array of items
+     * Create test array of items
      * @return the items array
      */
 
-    public static Item[] createTestList() {
-        Item[] items = new Item[10];
-        for (int i = 0; i < 10; i++)
-            items[i] = new Item("Item0" + i);
-        return items;
+    public static List<Item> createTestList() {
+
+        List<Item> list = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            list.add(new Item(i, "Item" + i, i < 5));
+        }
+        return list;
     }
 }
