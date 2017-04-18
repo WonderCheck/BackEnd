@@ -1,22 +1,29 @@
 package de.fortis_it.wondercheck.data;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Item {
 
     /**
-     * Data structure for our items
+     * Data structure for our items entity
      */
 
-    private int id;
+    @Id
+    @GeneratedValue( strategy = GenerationType.AUTO )
+    private long id;
+
     private String name;
     private boolean state;
 
-    Item( int id, String name, boolean state ) {
-        this.id = id;
-        this.name = name;
-        this.state = state;
-    }
+    protected Item( ){ }
 
-    public int getId() { return id; }
+    Item( String name ) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;

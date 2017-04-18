@@ -18,6 +18,6 @@ public class ListController {
 
     @GetMapping
     public List<Item> returnItemsList() {
-        return Data.createTestList();
+        return new Data().createTestList();
     }
 }
