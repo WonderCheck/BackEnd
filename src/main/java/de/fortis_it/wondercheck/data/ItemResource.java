@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Item {
+public class ItemResouce {
 
     /**
      * Data structure for our items entity
@@ -19,9 +19,9 @@ public class Item {
     private String name;
     private boolean state;
 
-    protected Item( ){ }
+    protected ItemResouce( ){ }
 
-    Item( String name ) { this.name = name; }
+    ItemResouce( String name ) { this.name = name; }
 
     public String getName() {
         return name;
