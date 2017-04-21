@@ -13,7 +13,7 @@ public class ItemResource {
      */
 
     @Id
-    @GeneratedValue( strategy = GenerationType.AUTO )
+    @GeneratedValue
     private long id;
 
     private String name;
@@ -21,7 +21,9 @@ public class ItemResource {
 
     protected ItemResource( ){ }
 
-    ItemResource(String name ) { this.name = name; }
+    ItemResource( String name ) { this.name = name; }
+
+    public long getId() { return id; }
 
     public String getName() {
         return name;
